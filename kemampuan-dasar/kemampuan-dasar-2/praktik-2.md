@@ -13,4 +13,4 @@
     three are generall two ways of setting up github for team collaboration:
 
         1.membuat oragnisasi belajarBarengKuy
-
+        ![Gambar pertama](../../images/Screenshot from 2023-01-10 17-15-42.png)
