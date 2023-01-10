@@ -31,3 +31,34 @@
         5. Menambahkan team dan mengatur level permission
 
 ![Screenshot from 2023-01-10 21-03-23](https://user-images.githubusercontent.com/23657902/211575000-951a16ce-b52b-4fbf-9b87-692f4a7530fd.png)
+
+## Pull Request
+
+    Ada 2 model untuk pull request pada github, yaitu :
+    1. Fork & pull model(digunakan untuk publik yang tidak memiliki hak akses untuk push)
+    2. Share repository model(digunakan pada repository private dan hanya orang tertentu yang memiliki akses)
+
+    Berikut adalah cara fork file:
+    1. Membuat repository di Organisasi github
+
+![Screenshot from 2023-01-10 21-23-23](https://user-images.githubusercontent.com/23657902/211580643-a862bbdf-571a-4959-a318-654e3e06c98f.png)
+
+    2. Fork repository yang ada pada organisasi supaya tercopy ke repository pribadi
+
+![Screenshot from 2023-01-10 21-24-40](https://user-images.githubusercontent.com/23657902/211580938-19de46d6-94bd-4397-a138-6bf1bede24d1.png)
+
+    3. Menggunakan perintah git clone untuk copy ke komputer lokal
+
+![Screenshot from 2023-01-10 21-25-44](https://user-images.githubusercontent.com/23657902/211581123-f55011a6-49ba-4f36-8b46-f34d9d006bdf.png)
+
+    4. Merubah ke branch yang baru dan commit ke github
+
+![Screenshot from 2023-01-10 21-31-07](https://user-images.githubusercontent.com/23657902/211581372-beed5ad3-245b-496c-bbb3-c9a2987b8701.png)
+
+    5. File berhasil comit
+
+![Screenshot from 2023-01-10 21-36-48](https://user-images.githubusercontent.com/23657902/211581718-f026f325-338d-4a92-bbb8-416465b2a4a1.png)
+
+    6. Merge pull request yang telah di commit
+
+![Screenshot from 2023-01-10 21-37-49](https://user-images.githubusercontent.com/23657902/211581974-2f5619e2-d937-454c-a440-6a7b318d9c8f.png)
