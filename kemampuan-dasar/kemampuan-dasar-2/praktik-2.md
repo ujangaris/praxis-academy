@@ -14,5 +14,5 @@
 
         1.membuat oragnisasi belajarBarengKuy
 
-<<<<<<< HEAD
-![Gambar pertama](/../images/Screenshot from 2023-01-10 17-15-42.png)
+<HEAD
+![Gambar pertama](../images/Screenshot from 2023-01-10 17-15-42.png)
