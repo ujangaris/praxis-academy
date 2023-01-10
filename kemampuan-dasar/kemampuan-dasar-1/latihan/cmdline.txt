@@ -1,0 +1,266 @@
+• Guru99
+1.  Listing files :
+    aris@aris-HuronRiver-Platform:~/Praxis$ ls -R
+    .:
+    praxis-academy
+
+    ./praxis-academy:
+    kemampuan-dasar-1
+
+    ./praxis-academy/kemampuan-dasar-1:
+    latihan
+
+    ./praxis-academy/kemampuan-dasar-1/latihan:
+    cmdline.txt  env.txt  kernel-linux.txt  shellscripts
+
+    ./praxis-academy/kemampuan-dasar-1/latihan/shellscripts:
+    add_numbers.sh         elseif_example.sh      multiline-comment.sh
+    append_file.sh         file_exist.sh          newdir
+    book.txt               First.sh               read_file.sh
+    case_example.sh        for_example.sh         simple_if.sh
+    command_line_names.sh  function_example.sh    sleep_example.sh
+    command_line.sh        function_parameter.sh  string_combine.sh
+    comment_example.sh     function_return.sh     substring_example.sh
+    date_parse.sh          if_with_AND.sh         test_dir
+    delete_file.sh         if_with_OR.sh          user_input.sh
+    directory_exist.sh     mail_example.sh        wait_example.sh
+    echo_example.sh        make_directory.sh      while_example.sh
+
+    ./praxis-academy/kemampuan-dasar-1/latihan/shellscripts/newdir:
+
+    ./praxis-academy/kemampuan-dasar-1/latihan/shellscripts/test_dir:
+
+    aris@aris-HuronRiver-Platform:~/Praxis$ ls -r
+    praxis-academy
+
+Untuk mencari informasi rinci tentang file:
+    aris@aris-HuronRiver-Platform:~/Praxis$ ls -al
+    total 12
+    drwxrwxr-x  3 aris aris 4096 Jan  9 22:52 .
+    drwxr-xr-x 42 aris aris 4096 Jan 10 06:27 ..
+    drwxrwxr-x  3 aris aris 4096 Jan  9 22:52 praxis-academy
+2.  Listing Hidden Files :
+    aris@aris-HuronRiver-Platform:~/Praxis/praxis-academy$ cd ..
+    aris@aris-HuronRiver-Platform:~/Praxis$ cd ..
+    aris@aris-HuronRiver-Platform:~$ ls -a
+    .               blog                          .gphoto                         Music               .profile                   .vim
+    ..              .cache                        .gradle                         .mysql              Public                     .viminfo
+    .android        .config                       hasilPelajaran                  .mysql_history      .quokka                    vimrc
+    Android         .dbshell                      installer                       .netrc              .rest-client               .vscode
+    .bash_history   Desktop                       Interview                       .node_repl_history  snap                       .wallaby
+    .bash_logout    Documents                     .java                           .npm                .ssh                       watchman
+    .bashrc         Downloads                     java_error_in_studio_14538.log  .nvm                .sudo_as_admin_successful  .wget-hsts
+    .bashrc.save    .emulator_console_auth_token  LatihanLagi                     Pictures            Templates
+    .bashrc.save.1  .gitconfig                    .local                          .pki                .thunderbird
+    belajarCoding   .gnome                        .mongorc.js                     Postman             Tools
+    belajar.txt     .gnupg    
+
+3.  Creating and Viewing files
+    - Untuk membuat file cat > sample1:
+        aris@aris-HuronRiver-Platform:~/Praxis$ cat > sample1
+        ^C
+    - untuk melihat hasil:
+        aris@aris-HuronRiver-Platform:~/Praxis$ ls
+        mydirectory  praxis-academy  sample  sample1
+    - Untuk membuat file cat > sample2:
+        aris@aris-HuronRiver-Platform:~/Praxis$ cat > sample2
+        ^C
+    - untuk melihat hasil:
+        aris@aris-HuronRiver-Platform:~/Praxis$ ls
+        mydirectory  praxis-academy  sample  sample1  sample2
+    - untuk memasukan isi tulisan :
+        aris@aris-HuronRiver-Platform:~/Praxis$ cat > sample1
+        This is sample1
+        aris@aris-HuronRiver-Platform:~/Praxis$ cat > sample2
+        This is sample2
+    - untuk membaca isi file :
+        aris@aris-HuronRiver-Platform:~/Praxis$ cat sample1
+        This is sample1
+        aris@aris-HuronRiver-Platform:~/Praxis$ cat sample2
+        This is sample2
+    - Untuk menggabungkan  2 file menjadi satu :
+        aris@aris-HuronRiver-Platform:~/Praxis$ cat sample1 sample2 > sample
+        aris@aris-HuronRiver-Platform:~/Praxis$ cat sample
+        This is sample1
+        This is sample2
+4.  Deleting Files
+    Untuk menghapus gunakan
+    rm sample1
+    hasil:
+        aris@aris-HuronRiver-Platform:~/Praxis$ rm sample1
+        aris@aris-HuronRiver-Platform:~/Praxis$ ls
+        praxis-academy  sample  sample2
+5.  Moving and Re-naming Files
+    Untuk memindahkan file:
+        aris@aris-HuronRiver-Platform:~/Praxis$ sudo mv sample2 praxis-academy/
+        [sudo] password for aris: 
+        aris@aris-HuronRiver-Platform:~/Praxis$ ls
+        praxis-academy  sample
+        aris@aris-HuronRiver-Platform:~/Praxis$ cd praxis-academy/
+        aris@aris-HuronRiver-Platform:~/Praxis/praxis-academy$ ls
+        kemampuan-dasar-1  sample2
+    - mv juga dapat digunakan untuk mengganti nama file:
+        aris@aris-HuronRiver-Platform:~/Praxis/praxis-academy$ sudo mv sample2 sample
+        aris@aris-HuronRiver-Platform:~/Praxis/praxis-academy$ ls
+        kemampuan-dasar-1  sample
+6. Manipulasi Direktori    
+    aris@aris-HuronRiver-Platform:~/Praxis/praxis-academy$ cd ..
+    aris@aris-HuronRiver-Platform:~/Praxis$ mkdir mydirectory
+    aris@aris-HuronRiver-Platform:~/Praxis$ ls
+    mydirectory  praxis-academy  sample
+    aris@aris-HuronRiver-Platform:~/Praxis$ mkdir mydirectory/Music
+    - hasil :
+    aris@aris-HuronRiver-Platform:~/Praxis$ ls
+    mydirectory  praxis-academy  sample
+    aris@aris-HuronRiver-Platform:~/Praxis$ cd mydirectory/
+    aris@aris-HuronRiver-Platform:~/Praxis/mydirectory$ ls
+    Music
+
+ 7. Removing Directories   
+    aris@aris-HuronRiver-Platform:~/Praxis/mydirectory$ cd ..
+    aris@aris-HuronRiver-Platform:~/Praxis$ mkdir dir1 dir2 dir3
+    aris@aris-HuronRiver-Platform:~/Praxis$ ls
+    dir1  dir2  dir3  mydirectory  praxis-academy  sample
+    - hasil :
+        aris@aris-HuronRiver-Platform:~/Praxis$ rmdir dir3
+        aris@aris-HuronRiver-Platform:~/Praxis$ ls
+        dir1  dir2  mydirectory  praxis-academy  sample
+        aris@aris-HuronRiver-Platform:~/Praxis$ rmdir dir2 dir1
+        aris@aris-HuronRiver-Platform:~/Praxis$ ls
+        mydirectory  praxis-academy  sample
+8.  Renaming Directory
+    aris@aris-HuronRiver-Platform:~/Praxis$ mv sample sample-new
+    aris@aris-HuronRiver-Platform:~/Praxis$ ls
+    - hasil :
+        mydirectory  praxis-academy  sample-new
+9. Other Important Commands
+   aris@aris-HuronRiver-Platform:~/Praxis$ man man 
+        MAN(1)                        Manual pager utils                       MAN(1)
+
+        NAME
+            man - an interface to the system reference manuals
+
+        SYNOPSIS
+            man [man options] [[section] page ...] ...
+            man -k [apropos options] regexp ...
+            man -K [man options] [section] term ...
+            man -f [whatis options] page ...
+            man -l [man options] file ...
+            man -w|-W [man options] page ...
+
+        DESCRIPTION
+            man  is the system's manual pager.  Each page argument given to man is
+            normally the name of a program, utility or function.  The manual  page
+            associated  with  each of these arguments is then found and displayed.
+            A section, if provided, will direct man to look only in  that  section
+            of  the  manual.  The default action is to search in all of the avail‐
+            able sections following a pre-defined order  (see  DEFAULTS),  and  to
+            show  only  the  first page found, even if page exists in several sec‐
+            tions.
+        Manual page man(1) line 1 (press h for help or q to quit)
+
+10. History
+    aris@aris-HuronRiver-Platform:~/Praxis$ history
+    1891  echo "Hello Dunia"
+    1892  nano First.sh
+    1893  bash First.sh
+    1894  sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
+    1895  sudo apt-get autoclean
+    1896  bash First.sh
+    1897  nano echo_example.sh
+    1898  bash echo_example.sh
+    1899  nano echo_example.sh
+    1900  bash echo_example.sh
+    1901  nano comment_example.sh
+    1902  bash comment_example.sh
+    1903  sudo dpkg -i code_1.74.2-1671533413_amd64.deb 
+    1904  cd ..
+    1905  shutdown now
+    1906  echo $SHELL
+    1907  comment_example.sh
+    1908  ls
+    1909  cd praxis-academy/
+    1910  l
+    1911  scd kemampuan-dasar-1/
+    1912  cd kemampuan-dasar-1/
+    1913  ls
+    1914  cd latihan/
+    1915  cd shellscripts/
+    1916  comment_example.sh
+    1917  ls
+    1918  First.sh
+    1919  bash comment_example.sh
+    1920  nano multiline-comment.sh
+    1921  bash multiline-comment.sh
+    1922  nano while_example.sh
+    1923  bash while_example.sh
+    1924  nano for_example.sh
+    1925  bash for_example.sh
+    1926  nano user_input.sh
+    1927  bash user_input.sh
+    1928  nano simple_if.sh
+    1929  bash simple_if.sh
+    1930  nano if_with_AND.sh
+    1931  bash if_with_AND.sh
+    1932  nano if_with_OR.sh
+    1933  bash if_with_OR.sh
+    1934  nano elseif_example.sh
+    1935  bash elseif_example.sh
+    1936  nano case_example.sh
+    1937  bash case_example.sh
+    1938  nano command_line.sh
+    1939  ls
+    1940  cd praxis-academy/
+    1941  ls
+    1942  cd kemampuan-dasar-1/
+    1943  cd latihan/
+    1944  cd shellscripts/
+    1945  nano command_line.sh
+    1946  ls
+    1947  ls -R
+    1948  ls
+    1949  cd Praxis/
+    1950  ls
+    1951  ls -R
+    1952  ls -r
+    1953  ls -al
+    1954  ls -a
+    1955  cat > sample1
+    1956  cat sample1
+    1957  cat > sample1
+    1958  cat sample1
+    1959  cat > sample1
+    1960  cat > sample2
+    1961  cat sample2
+    1962  cat sample1 sample2 > sample
+    1963  cat sample
+    1964  cat sample1
+    1965  cat sample2
+    1966  cat sample
+    1967  ls
+    1968  rm sample1
+    1969  ls
+    1970  sudo mv sample2 praxis-academy/
+    1971  ls
+    1972  cd praxis-academy/
+    1973  ls
+    1974  sudo mv sample2 sample
+    1975  ls
+    1976  sudo rm -rf sample
+    1977  ls
+    1978  cd ..
+    1979  mkdir mydirectory
+    1980  ls
+    1981  mkdir mydirectory/Music
+    1982  ls
+    1983  cd mydirectory/
+    1984  ls
+    1985  cd ..
+    1986  mkdir dir1 dir2 dir3
+    1987  ls
+    1988  rmdir dir3
+    1989  ls
+    1990  rmdir dir2 dir1
+    1991  ls
+    1992  man man
+    1993  history
