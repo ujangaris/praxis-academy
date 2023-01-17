@@ -5,13 +5,14 @@ while (x < 10) {
 }
 console.log(x) */
 
-var x = 1
-{
-  var x = 2
-}
-console.log(x) // 2
+// var x = 1
+// {
+//   var x = 2
+// }
+// console.log(x) // 2
 
 // Conditional statements
+// contoh 1
 let hour = 12
 if (hour < 18) {
   greeting = 'Good day'
@@ -20,51 +21,61 @@ if (hour < 18) {
 }
 console.log(greeting)
 
-console.log('<<===falsy values in JavaScript==>>')
-// falsy values in JavaScript
-// false
-if (false) {
-  console.log('ini tidak dijalankan')
+// contoh 2
+/* let datang = 9.0
+let kegiatan = ''
+if (datang <= 9.0) {
+  console.log('Anda belajar di kelas')
 } else {
-  console.log('ini yang dijalankan jika false')
+  console.log('Anda ngepel dulu')
 }
-// null
-if (null) {
-  console.log('ini tidak dijalankan')
-} else {
-  console.log('ini yang dijalankan jika null')
-}
-// undefined
-if (undefined) {
-  console.log('ini tidak dijalankan')
-} else {
-  console.log('ini yang dijalankan jika undefined')
-}
+console.log(kegiatan) */
 
-// 0
-if (0) {
-  console.log('ini tidak dijalankan')
-} else {
-  console.log('ini yang dijalankan jika 0')
-}
+// console.log('<<===falsy values in JavaScript==>>')
+// // falsy values in JavaScript
+// // false
+// if (false) {
+//   console.log('ini tidak dijalankan')
+// } else {
+//   console.log('ini yang dijalankan jika false')
+// }
+// // null
+// if (null) {
+//   console.log('ini tidak dijalankan')
+// } else {
+//   console.log('ini yang dijalankan jika null')
+// }
+// // undefined
+// if (undefined) {
+//   console.log('ini tidak dijalankan')
+// } else {
+//   console.log('ini yang dijalankan jika undefined')
+// }
 
-// NaN
-if (NaN) {
-  console.log('ini tidak dijalankan')
-} else {
-  console.log('ini yang dijalankan jika NaN')
-}
+// // 0
+// if (0) {
+//   console.log('ini tidak dijalankan')
+// } else {
+//   console.log('ini yang dijalankan jika 0')
+// }
 
-// ""
-if ('') {
-  console.log('ini tidak dijalankan')
-} else {
-  console.log('ini yang dijalankan jika ""')
-}
+// // NaN
+// if (NaN) {
+//   console.log('ini tidak dijalankan')
+// } else {
+//   console.log('ini yang dijalankan jika NaN')
+// }
+
+// // ""
+// if ('') {
+//   console.log('ini tidak dijalankan')
+// } else {
+//   console.log('ini yang dijalankan jika ""')
+// }
 
 // switch statement
 
-const buah = 'jeruk'
+/* const buah = 'jeruk'
 switch (buah) {
   case 'apel':
     console.log('Apel adalah buah merah')
@@ -77,10 +88,5 @@ switch (buah) {
     break
   default:
     console.log('Saya tidak suka buah')
-    break
-}
-
-// Exception handling statements
-//Exception types
-
-if (x == '') throw 'Terjadi kesalahan'
+±±±    break
+} */
