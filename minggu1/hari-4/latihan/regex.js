@@ -82,3 +82,17 @@ const result10 = regex10.exec(string11)
 console.log(result10) //5
 const result11 = regex10.exec(string12)
 console.log(result11) //3
+
+// contoh regex w dan s
+console.log('<<< contoh regex w dan s >>>')
+const str = 'fee fi fo fum'
+const regexs = /\w+\s/g
+
+console.log(regexs.exec(str)) //fee
+console.log(regexs.exec(str)) //fi
+console.log(regexs.exec(str)) //fo
+console.log(regexs.exec(str)) //null
+
+// diatas fum tidak dicetak karna tidak ada spasi di belakangnya.
+
+console.log(str.match(regexs)) // [ 'fee ', 'fi ', 'fo ' ]

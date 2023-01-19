@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chek Plat Nomor</title>
+  </head>
+  <body>
+    <form>
+      Masukan Plat Nomor Kendaraan : <input type="text" id="platNomor" />
+      <button type="button" onclick="checkPlatNomor()">Cek Plat Nomor</button>
+    </form>
+    <script>
+      function checkPlatNomor() {
+        var platNomor = document.getElementById('platNomor').value
+        var regex = /^[A-Z]{1,2}[-][0-9]{1,4}[-][A-Z]{1,3}$/ //keterangan di bagian bawah
+        //mengecek apakah sebuah string sesuai dengan sebuah regular expression yang telah ditentukan
+        if (regex.test(platNomor)) {
+          alert('Plat nomor kendaraan valid di Indonesia')
+        } else {
+          alert('Plat nomor kendaraan tidak valid di Indonesia')
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!-- keterangan kode  -->
+
+<!-- Code var regex = /^[A-Z]{1,2}[-][0-9]{1,4}[-][A-Z]{1,3}$/ membuat sebuah regular expression yang digunakan untuk mengecek apakah input yang diterima sesuai dengan format plat nomor kendaraan di Indonesia.
+
+/ menandakan awal dan akhir dari sebuah regular expression.
+^ menandakan awal dari string yang akan dicheck.
+[A-Z] menandakan karakter yang diterima hanya huruf besar dari A-Z.
+{1,2} menandakan bahwa karakter yang diterima hanya 1 atau 2 karakter.
+- menandakan karakter "-" harus diisi.
+[0-9] menandakan karakter yang diterima hanya angka 0-9.
+$ menandakan akhir dari string yang akan dicheck.
+Secara keseluruhan regular expression ini akan mengecek apakah input yang diterima berupa 2 huruf besar A-Z diikuti dengan "-" diikuti dengan 4 angka diikuti dengan "-" diikuti dengan 3 huruf besar A-Z. -->
+
+Note: Regular expression ini hanya valid jika format plat nomor kendaraan di
+Indonesia seperti "A-1234-ABC"

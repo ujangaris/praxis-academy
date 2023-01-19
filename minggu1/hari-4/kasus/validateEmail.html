@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Email</title>
+  </head>
+  <body>
+    <form>
+      <label>Email:</label>
+      <input type="text" placeholder="Enter Email" id="email" />
+      <button type="button" onclick="validateEmail()">Submit</button>
+    </form>
+    <script>
+      function validateEmail() {
+        var email = document.getElementById('email').value
+        var regExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/ //keterangan code di bagian bawah
+        //mengecek apakah sebuah string sesuai dengan sebuah regular expression yang telah ditentukan
+        if (regExp.test(email)) {
+          var username = email.split('@')[0] //mengambil index pertama
+          var domain = email.split('@')[1] //mengambil index kedua setelah @
+          alert(
+            'Halo, username anda adalah ' +
+              username +
+              ', domain anda adalah ' +
+              domain +
+              '.'
+          )
+        } else {
+          alert('Invalid Email')
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!-- penjelasan code regExp -->
+
+<!-- Code di atas adalah contoh dari sebuah regular expression yang digunakan untuk memvalidasi alamat email. Dalam regular expression, karakter "/" digunakan untuk menandai awal dan akhir dari ekspresi reguler.
+
+^ adalah karakter anchor yang digunakan untuk menandakan awal dari string yang akan di validasi
+[a-zA-Z0-9._-]+ adalah sebuah karakter set yang menyatakan bahwa string yang valid harus terdiri dari huruf kecil, huruf besar, angka, titik, garis bawah, dan garis miring, yang diulang sebanyak satu atau lebih kali.
+
+@ adalah karakter yang harus muncul dalam string yang valid.
+
+[a-zA-Z0-9.-]+ adalah sebuah karakter set yang menyatakan bahwa string yang valid harus terdiri dari huruf kecil, huruf besar, angka, titik dan garis miring, yang diulang sebanyak satu atau lebih kali.
+
+\. adalah karakter yang harus muncul dalam string yang valid
+
+[a-zA-Z]{2,4} adalah sebuah karakter set yang menyatakan bahwa string yang valid harus terdiri dari huruf kecil atau huruf besar, yang diulang sebanyak 2-4 kali.
+
+$ adalah karakter anchor yang digunakan untuk menandakan akhir dari string yang akan di validasi
+
+Secara keseluruhan, ekspresi reguler ini menyatakan bahwa string yang valid harus dimulai dengan karakter dari karakter set yang ditentukan, diikuti oleh karakter "@", diikuti oleh karakter dari karakter set yang ditentukan, diikuti oleh karakter ".", dan diakhiri dengan karakter dari karakter set yang ditentukan. -->
