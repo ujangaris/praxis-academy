@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RegExp</title>
+  </head>
+  <body>
+    <script>
+      {
+        // create regex
+        //   /* const regex1 = /ujang/
+        //   const regex2 = new RegExp('ujang')
+        //   const regex3 = new RegExp(/ujang/) */
+      }
+      {
+        const name = 'ujang arisandi'
+        const regex = /arisandi/
+
+        const result = regex.exec(name)
+        console.info(result) //["arisandi", index: 6, input: "ujang arisandi", groups: undefined]
+
+        // untuk menyatakan bahwa regex tersebut akan mencari ada
+        const test = regex.test(name)
+        console.info(test) //true
+      }
+      {
+        // regex modifier
+        const name = 'ujang arisandi\nUjang Arisandi\nanisandi'
+        const regex1 = /^ujang/gim
+        const regex2 = /A.isandi/gi
+
+        let result
+        while ((result = regex1.exec(name)) !== null) {
+          console.info(result)
+        }
+        while ((result = regex2.exec(name)) !== null) {
+          console.info(result)
+        }
+      }
+
+      {
+        // advaced regex
+        const regex = /ek[aiueo]/gi
+        const name = 'eko eki eka eku eke edo eko eki'
+        let result
+        while ((result = result = regex.exec(name)) !== null) {
+          console.info(result)
+        }
+      }
+
+      {
+        // regex di string
+        const name = 'eka eki eko eku eke edo eko eki'
+        console.info(name.match(/ek[aiueo]/gi)) //["eka", "eki", "eko", "eku", "eke", "eko", "eki"]
+        console.info(name.search(/ek[aiueo]/gi)) //0
+        //replase hanya yang pertama
+        console.info(name.replace(/ek[aiueo]/i, 'kamu')) //kamu eki eko eku eke edo eko eki
+        //jika ingin semua menggunakan all
+        console.info(name.replaceAll(/ek[aiueo]/gi, 'kamu')) //kamu kamu kamu kamu kamu edo kamu kamu
+        console.info(name.split(/e/gi)) //["", "ka ", "ki ", "ko ", "ku ", "ke
+      }
+    </script>
+  </body>
+</html>

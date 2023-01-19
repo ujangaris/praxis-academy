@@ -21,3 +21,5 @@ if (a > b && a > c && a > d && a > f) {
   // jika tidak ada yang lebih besar
   console.log(f) // cetak nilai f ke console
 }
+
+
