@@ -14,7 +14,7 @@
     <script>
       function checkPlatNomor() {
         var platNomor = document.getElementById('platNomor').value
-        var regex = /^[A-Z]{1,2}[-][0-9]{1,4}[-][A-Z]{1,3}$/ //keterangan di bagian bawah
+        var regex = /^[\s+A-Za-b]{1,2}[-][0-9]{1,4}[-][a-zA-Z]{1,3}$/ //keterangan di bagian bawah
         //mengecek apakah sebuah string sesuai dengan sebuah regular expression yang telah ditentukan
         if (regex.test(platNomor)) {
           alert('Plat nomor kendaraan valid di Indonesia')

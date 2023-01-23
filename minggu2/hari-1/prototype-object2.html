@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prototype-object2</title>
+  </head>
+  <body>
+    <script>
+      function Employee(firstName, lastName) {
+        this.firstName = firstName
+        this.lastName = lastName
+      }
+      Employee.prototype.company = 'JavaTpoint'
+
+      let employee1 = new Employee('Martin', 'Roy')
+      let employee2 = new Employee('Duke', 'William')
+
+      document.writeln(
+        employee1.firstName +
+          ' ' +
+          employee1.lastName +
+          ' ' +
+          employee1.company +
+          '<br>'
+      )
+      document.writeln(
+        employee2.firstName + ' ' + employee2.lastName + ' ' + employee2.company
+      )
+    </script>
+  </body>
+</html>

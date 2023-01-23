@@ -1,7 +1,5 @@
-const data = required('../hari-5/journal.js')
-console.log(data)
-
 //Data Set
+
 console.log('<<< Data Set >>>') //`Data Set` adalah kumpulan data yang digunakan untuk menguji sebuah fungsi atau program yang kita buat agar dapat berjalan dengan baik dan sesuai dengan apa yang kita inginkan.
 let listOfNumbers = [2, 3, 5, 7, 11]
 console.log(listOfNumbers[2]) // 5
@@ -164,7 +162,9 @@ function phi(table) {
 
 console.log(phi([76, 9, 4, 1])) // -0.068599434
 
-function tableFor(event, journal) {
+// const data = import('journal.js')
+// console.log(data)
+/* function tableFor(event, journal) {
   let table = [0, 0, 0, 0]
   for (let i = 0; i < journal.length; i++) {
     let entry = journal[i],
@@ -177,10 +177,112 @@ function tableFor(event, journal) {
 }
 
 console.log(tableFor('pizza', JOURNAL))
-// → [76, 9, 4, 1]
+// → [76, 9, 4, 1] */
 
 // Array Loops
 console.log('<<< Array Loops >>>')
 for (let entry of journal) {
   console.log(`${entry.events.length} events.`)
 }
+
+// Further arrayology
+console.log('<<< Further arrayology >>>')
+let todoList = []
+function remember(task) {
+  todoList.push(task)
+}
+function getTask() {
+  return todoList.shift()
+}
+function rememberUrgently(task) {
+  todoList.unshift(task)
+}
+
+console.log([1, 2, 3, 2, 1].indexOf(2)) // 1]);
+console.log([1, 2, 3, 2, 1].lastIndexOf(2)) // 3]);
+// slice
+console.log('<<< slice >>>')
+console.log([0, 1, 2, 3, 4].slice(2, 4)) // [2, 3]);
+console.log([0, 1, 2, 3, 4].slice(2)) // [2, 3, 4]);
+
+function remove(array, index) {
+  return array.slice(0, index).concat(array.slice(index + 1))
+}
+
+console.log(remove(['a', 'b', 'c', 'd', 'e'], 2)) // ['a', 'b', 'd', 'e']);
+
+// Strings and Their Properties
+
+console.log('<<< Strings and Their Properties >>>')
+
+let kim = 'Kim'
+kim.age = 88
+console.log(kim.age) // undefined
+
+console.log('coconuts'.slice(4, 7)) // nut);
+// slice() mengembalikan bagian dari string
+console.log('coconut'.indexOf('u')) // 5);
+// indexOf() mengembalikan index dari karakter yang dicari
+
+console.log(' okay \n'.trim()) // okay); ')
+// trim() menghapus spasi di awal dan akhir string
+
+console.log(String(6).padStart(3, '0')) // 006);
+// padStart() menambahkan karakter di awal string
+//Dalam contoh ini, fungsi padStart() digunakan pada String 6 dengan panjang yang diinginkan
+//sebesar 3 dan karakter yang akan ditambahkan sebagai 0.
+//Ini berarti panjang dari string 6 harus menjadi 3 dan jika tidak, karakter 0 akan ditambahkan di depannya.
+//Sehingga output dari code tersebut adalah string 006
+//Perlu diingat, fungsi ini hanya berlaku untuk String, jadi jika ingin menggunakan fungsi ini pada number harus di convert terlebih dahulu menjadi String.
+
+let sentence = 'Secretarybirds specialize in stomping'
+let words = sentence.split(' ')
+console.log(words) // ['Secretarybirds', 'specialize', 'in', 'stomping']);
+console.log(words.join('. ')) // Secretarybirds. specialize. in. stomping);
+
+console.log('LA'.repeat(3)) // LALALA);
+
+let string = 'abc'
+console.log(string.length) // 3
+console.log(string[1]) // b
+
+// Rest Parameters
+console.log('<<< Rest Parameters >>>')
+
+function max(...numbers) {
+  let result = -Infinity //-Infinity adalah sebuah nilai yang digunakan untuk menyatakan negatif tak terhingga (negative infinity) dalam JavaScript.
+  for (let number of numbers) {
+    if (number > result) result = number
+  }
+  return result
+}
+
+console.log(max(4, 1, 9, -2)) // 9
+
+let numbers = [5, 1, 7]
+console.log(max(...numbers)) // 7
+
+let word = ['never', 'fully']
+console.log(['will', ...word, 'understand']) // ['will', 'never', 'fully', 'understand']
+
+// The Math Object
+console.log('<<< The Math Object >>>')
+
+function randomPointOnCircle(radius) {
+  let angle = Math.random() * 2 * Math.PI
+  return { x: radius * Math.cos(angle), y: radius * Math.sin(angle) }
+}
+
+console.log(randomPointOnCircle(2)) // {x: 0.3667, y: 1.966});
+console.log(Math.random()) // 0.36993729369714856);
+console.log(Math.random()) // 0.7273670325524261);
+console.log(Math.random()) // 0.4018076669890431);
+
+console.log(Math.floor(Math.random() * 10)) // 2);
+
+// Destructuring
+console.log('<<< Destructuring >>>')
+
+let { name } = { name: 'Faraji', age: 23 }
+
+console.log(name) // Faraji );
