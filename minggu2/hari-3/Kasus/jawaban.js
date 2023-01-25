@@ -1,4 +1,4 @@
-// 1 Ketiga pustaka tersebut menyediakan fungsi yang dapat digunakan untuk melakukan operasi dasar seperti map, filter, dan reduce. Contoh implementasi menggunakan Ramda:
+//  Ketiga pustaka tersebut menyediakan fungsi yang dapat digunakan untuk melakukan operasi dasar seperti map, filter, dan reduce. Contoh implementasi menggunakan Ramda:
 {
   const R = require('ramda')
   const numbers = [1, 2, 3, 4, 5]
