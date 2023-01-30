@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessing the DOM</title>
+  </head>
+  <body>
+    <script>
+      window.onload = () => {
+        // membuat elemen h1 baru
+        const heading = document.createElement("h1")
+        // membuat elemen teks "Big Head!"
+        const headingText = document.createTextNode("Big Head!")
+        // menambahkan elemen teks "Big Head!" sebagai child dari elemen h1 baru
+        heading.appendChild(headingText)
+        // menambahkan elemen h1 baru sebagai child dari elemen body dalam halaman web
+        document.body.appendChild(heading)
+      }
+    </script>
+  </body>
+</html>

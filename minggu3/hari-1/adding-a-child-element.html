@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container {
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+      }
+      button {
+        width: 100px;
+      }
+      div.parent {
+        border: 1px solid black;
+        padding: 5px;
+        width: 100px;
+        height: 100px;
+      }
+      div.child {
+        border: 1px solid black;
+        padding: 5px;
+        margin: 10px;
+        width: 100px;
+        height: 100px;
+        box-sizing: border-box;
+      }
+    </style>
+    <title>Adding a child element</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="parent">parent</div>
+      <button id="add-child" type="button">Add a child</button>
+      <button id="remove-child" type="button">Remove child</button>
+    </div>
+    <script>
+      const parent = document.body.querySelector(".parent")
+      const addChild = document.body.querySelector("#add-child")
+
+      addChild.addEventListener("click", () => {
+        // if (parent.childNodes.lenght > 1) {
+        //   return
+        // }
+        const child = document.createElement("div")
+        child.classList.add("child")
+        child.textContent = "child"
+        parent.appendChild(child)
+      })
+
+      const removeChild = document.body.querySelector("#remove-child")
+      removeChild.addEventListener("click", () => {
+        const child = document.body.querySelector(".child")
+        parent.removeChild(child)
+      })
+    </script>
+  </body>
+</html>

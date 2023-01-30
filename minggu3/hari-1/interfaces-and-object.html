@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container {
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+      }
+      button {
+        width: 200px;
+      }
+    </style>
+    <title>Interfaces and object</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <textarea cols="30" rows="10" class="story"></textarea> -->
+      <h1 class="story">Haii</h1>
+      <button id="set-text" type="button">Jawab Pesan</button>
+      <button id="clear-text" type="button">Clear text content</button>
+    </div>
+    <script>
+      const story = document.body.querySelector(".story")
+      const setText = document.body.querySelector("#set-text")
+      setText.addEventListener("click", () => {
+        story.textContent = "<p>ada ada sihh??</p>"
+      })
+
+      const clearText = document.body.querySelector("#clear-text")
+      clearText.addEventListener("click", () => {
+        story.textContent = ""
+      })
+    </script>
+  </body>
+</html>
