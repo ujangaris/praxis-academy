@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 1. Installasi -->
+    <!-- CDN ReactJs -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Link CDN Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <title>Membuat Component</title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="app"></div>
+      </div>
+    </div>
+    <script type="text/babel">
+      // 1. Class Compnent perlu menggunakan render
+      class Buttonjsx extends React.Component {
+        render() {
+          return <button className="btn btn-primary">Button Primary</button>
+        }
+      }
+      //   2. Function Component tidak perlu menggunakan render
+      function Button() {
+        return <button className="btn btn-primary">Button Primary</button>
+      }
+      //   3. Membuat Function dengan Arrow
+      const Button2 = () => {
+        return <button className="btn btn-primary">Button2 Primary</button>
+      }
+      class Cardjsx extends React.Component {
+        render() {
+          const card = (
+            <div className="card">
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" className="btn btn-primary">
+                  Go somewhere
+                </a>
+              </div>
+            </div>
+          )
+          return card
+        }
+      }
+      const Cardfunction = () => {
+        return (
+          <div className="card" style={{ width: "15rem" }}>
+            <div className="card-body">
+              <h5 className="card-title">Halo aku adalah card</h5>
+              <p className="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nostrum, sunt?
+              </p>
+              <Button />
+              <Button2 />
+            </div>
+          </div>
+        )
+      }
+
+      const Navbar = () => {
+        return (
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                Navbar
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <a className="nav-link active" aria-current="page" href="#">
+                      Home
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      Features
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      Pricing
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        )
+      }
+      ReactDOM.render(<Navbar />, document.getElementById("app"))
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
